@@ -14,7 +14,7 @@ import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
 import flickStoreDemo from "../assets/video-demo/flick-store-demo.mp4";
 import timewiseDemo from "../assets/video-demo/time-wise-demo.mp4";
 import prankCalculatorDemo from "../assets/video-demo/prank-calculator-demo.mp4";
-import financeTrackerDemo from "../assets/video-demo/finance-tracker.mp4";
+import financeTrackerDemo from "../assets/video-demo/finance_tracker.mp4";
 const projects = [
   {
     id: 1,
