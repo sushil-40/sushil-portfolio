@@ -5,21 +5,26 @@ import flickStoreImage from "../assets/completed-projects/flickstore.png";
 import contactListImage from "../assets/completed-projects/contactlist.webp";
 import prankCalculatorImage from "../assets/completed-projects/prankcalculator.png";
 import timewiseImage from "../assets/completed-projects/timewise.png";
-// import flickStoreImage from "../assets/completed-projects/flickstore.png";
-// import flickStoreImage from "../assets/completed-projects/flickstore.png";
-// import flickStoreImage from "../assets/completed-projects/flickstore.png";
+import tictactoeImage from "../assets/completed-projects/tictacImage.png";
+import rockPaperScissorImage from "../assets/completed-projects/rockPaperScissor.png";
+import currencyConverterImage from "../assets/completed-projects/currencyConverter.png";
+import financeTrackerImage from "../assets/completed-projects/finance-tracker.png";
 
 import contactListDemo from "../assets/video-demo/contact-list-demo.mp4";
 import flickStoreDemo from "../assets/video-demo/flick-store-demo.mp4";
 import timewiseDemo from "../assets/video-demo/time-wise-demo.mp4";
 import prankCalculatorDemo from "../assets/video-demo/prank-calculator-demo.mp4";
+import financeTrackerDemo from "../assets/video-demo/finance-tracker.mp4";
 const projects = [
   {
     id: 1,
     title: "FlickStore",
     description: "Movie search & save app (React)",
+    fullDescription:
+      "Flick Store is a modern, responsive web application built with React that allows users to search for movies using the TMDb API and curate a personalized list of favorites. With a clean user interface, smooth carousel integration via react-slick, and seamless local storage support, users can add or remove movies and have their selections persist across sessions—all without needing an account or backend. Designed as both a fun movie management tool and a portfolio project, Flick Store showcases practical front-end development skills, including API integration, state management with hooks, component-based architecture, and responsive design principles.",
     image: flickStoreImage,
-    link: "https://github.com/yourname/flickstore",
+    gitLink: "https://github.com/sushil-40/FlickStore/blob/main/src/App.jsx",
+    siteLink: "https://flick-store.vercel.app/",
     size: "grid-span-2", // wide
     projectDemo: { video: flickStoreDemo },
   },
@@ -36,59 +41,79 @@ const projects = [
     id: 3,
     title: "Prank Calculator",
     description: "A fun calculator that lies!",
+    fullDescription:
+      "📝 Project Description: Prank Calculator Prank Calculator is a fun and interactive twist on a basic calculator built with React. At its core, it performs all standard arithmetic operations — addition, subtraction, multiplication, division, and percentage. However, unlike a typical calculator, this one has a secret prank feature: it randomly gives an incorrect result, plays a sound effect, and applies a visual glitch to surprise the user. The project demonstrates how basic utility apps can be enhanced with creative logic, animations, and media to engage users in unexpected ways. It's a great example of combining practical coding skills with playful UX design.",
     image: prankCalculatorImage,
-    link: "https://github.com/yourname/prank-calculator",
+    gitLink: "https://github.com/sushil-40/prank-calculator-using-react",
+    siteLink: "https://prank-calculator-using-react-4f8uqlaqg.vercel.app/",
     size: "",
     projectDemo: { video: prankCalculatorDemo },
   },
   {
     id: 4,
-    title: "Contact List",
-    description: "Contacts app with mobile UI",
-    image: contactListImage,
-    link: "https://github.com/yourname/contact-list",
+    title: "Finance Tracker",
+    description: "Manage daily finances smartly",
+    fullDescription:
+      "Finance Tracker is a full-stack, responsive web application developed using React for the frontend and Node.js/Express for the backend. It helps users manage their income and expenses efficiently, offering real-time balance tracking and intuitive insights through Nivo-powered bar, pie, and line charts. The app features secure user authentication with JWT and password protection using bcrypt hashing, ensuring data safety. With a clean, mobile-friendly interface, Finance Tracker showcases my skills in frontend development, backend integration, data visualization, and secure user authentication. It also sets the stage for future enhancements like budgeting goals and financial reports.",
+    image: financeTrackerImage,
+    gitLink: "https://github.com/sushil-40/FinanceTracker_Client",
+    siteLink: "https://finance-tracker-client-nu.vercel.app/",
     size: "grid-span-2-2",
-    projectDemo: { video: contactListDemo },
+    projectDemo: { video: financeTrackerDemo },
   },
   {
     id: 5,
-    title: "Balancing Beads",
-    description: "Tire balancing calculator",
-    image: "/images/beads.png",
-    link: "https://github.com/yourname/balancing-beads",
-    size: "grid-span-2-2", // big square
+    title: "Contact List",
+    description: "Contacts app with mobile UI",
+    fullDescription:
+      "The Contact List App is a fully responsive, interactive web application designed to simulate a mobile-style contact management interface. It fetches real user data from the RandomUser API and displays it in an accordion layout, allowing users to view, search, and filter contact information by gender.This project mimics a mobile screen experience starting with a Slide to Unlock feature, followed by an engaging user interface. Contacts include images, names, phone numbers, email addresses, and clickable location links that open in Google Maps. A live pie chart visualizes the gender breakdown of the fetched contacts using Chart.js. It's a great example of how to combine API integration, DOM manipulation, event handling, and data visualization using pure JavaScript and Bootstrap. The app is ideal for showcasing front-end skills in portfolio projects or learning about real-time search, filtering, and modal interactions.",
+    image: contactListImage,
+    gitLink: "https://github.com/sushil-40/Contact-List",
+    siteLink: "https://sushil-40.github.io/Contact-List/",
+    size: "grid-span-2-2",
+    projectDemo: { video: contactListDemo },
   },
 
   {
     id: 6,
-    title: "Finance Tracker",
-    description: "Manage daily finances smartly",
-    image: "/images/finance.png",
-    link: "https://github.com/yourname/finance-tracker",
-    size: "",
+    title: "Balancing Beads",
+    description: "Tire balancing calculator",
+    image: "/images/beads.png",
+    link: "https://github.com/yourname/balancing-beads",
+    size: "", // big square
   },
+
   {
     id: 7,
-    title: "Finance Tracker",
-    description: "Manage daily finances smartly",
-    image: "/images/finance.png",
-    link: "https://github.com/yourname/finance-tracker",
+    title: "Tic Tac Toe",
+    description: "Fun game 😁",
+    fullDescription:
+      "Tic Tac Toe is a classic two-player game recreated using HTML, CSS, and JavaScript. This mini project allows two users to play locally by taking turns marking X and O on a 3x3 grid. The game includes interactive logic to detect winners and ties using predefined win patterns, and provides visual feedback through color-coded moves and dynamic messages. Players can reset the game at any point using the Reset or New Game buttons. It's a great example of DOM manipulation, event handling, and array-based game logic in JavaScript — ideal for beginners and those improving front-end development skills.",
+    image: tictactoeImage,
+    gitLink: "https://github.com/sushil-40/tic-tac-toe",
+    siteLink: "https://sushil-40.github.io/tic-tac-toe/",
     size: "",
   },
   {
     id: 8,
-    title: "Finance Tracker",
-    description: "Manage daily finances smartly",
-    image: "/images/finance.png",
-    link: "https://github.com/yourname/finance-tracker",
+    title: "Rock Paper Scissor",
+    description: "Mini game 🫠",
+    fullDescription:
+      "Rock Paper Scissors is a beginner-friendly web-based game designed for hands-on practice with JavaScript fundamentals such as DOM manipulation, event handling, conditional logic, and dynamic UI updates. It's ideal for learning how to build interactive games and projects using only front-end technologies.",
+    image: rockPaperScissorImage,
+    gitLink: "https://github.com/sushil-40/RockPaperScissors",
+    siteLink: "https://sushil-40.github.io/RockPaperScissors/",
     size: "",
   },
   {
     id: 9,
-    title: "Finance Tracker",
-    description: "Manage daily finances smartly",
-    image: "/images/finance.png",
-    link: "https://github.com/yourname/finance-tracker",
+    title: "Currency Converter",
+    description: "Online Currency Converter",
+    fullDescription:
+      "The Currency Converter is a simple web-based application developed for educational purposes, designed to help users convert amounts between different currencies using real-time exchange rates fetched from a public API. It features an interactive UI where users can input an amount, select source and target currencies, and view the converted value instantly. The app dynamically displays country flags based on selected currencies, enhancing user experience. Built with HTML, CSS, and vanilla JavaScript, this project demonstrates API integration, DOM manipulation, and responsive design without relying on any external JavaScript frameworks.",
+    image: currencyConverterImage,
+    gitLink: "https://github.com/sushil-40/Currency-Converter",
+    siteLink: "https://sushil-40.github.io/Currency-Converter/",
     size: "",
   },
   {
@@ -215,10 +240,7 @@ const Projects = () => {
                 style={{ color: "Violet", fontSize: "35px" }}
               >
                 {/* <a href=""> */}
-                <a
-                  href={selectedProject.gitHubLink}
-                  style={{ cursor: "pointer" }}
-                >
+                <a href={selectedProject.gitLink} style={{ cursor: "pointer" }}>
                   <i className="fa-brands fa-github"></i>
                 </a>
                 {/* <a href=""> */}
@@ -238,7 +260,7 @@ const Projects = () => {
                 <h4 style={{ color: "SlateBlue" }}>
                   Description <hr className="container" />
                 </h4>
-                <p>{selectedProject.description}</p>
+                <p>{selectedProject.fullDescription}</p>
                 <hr />
               </div>
             </>
