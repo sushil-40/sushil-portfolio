@@ -9,6 +9,7 @@ import {
   Footer,
 } from "../src/index.js";
 import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   useEffect(() => {
@@ -46,6 +47,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ToastContainer />
     </>
   );
 }

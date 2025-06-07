@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { postNewMessage } from "../../helpers/axiosHelper";
+import { toast } from "react-toastify";
+// import axios from "axios";
 const Contact = () => {
   const iconStyle = {
     color: "#f5f5f5",
@@ -9,34 +11,45 @@ const Contact = () => {
   };
 
   const [formData, setFormData] = useState({
+    subject: "Message from contact form",
     name: "",
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
+  const [responseMessage, setResponseMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleOnChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending......");
+    setLoading(true); // Start Loading
 
     try {
-      await axios.post("http://localhost:8000/contact", {
-        to: "sushildangoriya40@gmail.com",
-        subject: `Message from ${formData.name}`,
-        message: `<b>Message</b>: \n\n ${formData.message}`,
-      });
-      setStatus("Message sent successfully! ✔️");
-      setFormData({ name: "", email: "", message: "" });
+      const result = await postNewMessage(formData);
+
+      if (result.data.status === "success") {
+        toast.success("Email sent successfully!");
+        setResponseMessage(result.message);
+        setFormData({
+          subject: "Message from contact form",
+          name: "",
+          message: "",
+          email: "",
+        });
+      } else {
+        toast.error("Failed to send email. Try again !");
+      }
     } catch (error) {
       console.log(error);
-      setStatus("Failed to send message. Try again later !");
+      toast.error("An error occurred. Please try later!");
+    } finally {
+      setLoading(false); // Stop Loading
     }
   };
+
   return (
     <section id="contact" className="contact-section py-5 bg-dark text-white">
       <div className="container">
@@ -71,7 +84,7 @@ const Contact = () => {
         {/* Contact Form */}
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
-            <form name="send-message" onSubmit={handleSubmit}>
+            <form name="send-message" onSubmit={handleOnSubmit}>
               <div className="mb-3 text-white">
                 <input
                   type="text"
@@ -79,7 +92,7 @@ const Contact = () => {
                   className="form-control contact-input "
                   placeholder="Your Name"
                   value={formData.name}
-                  onChange={handleChange}
+                  onChange={handleOnChange}
                   required
                 />
               </div>
@@ -90,7 +103,7 @@ const Contact = () => {
                   className="form-control contact-input"
                   placeholder="Your Email"
                   value={formData.email}
-                  onChange={handleChange}
+                  onChange={handleOnChange}
                   required
                 />
               </div>
@@ -101,16 +114,33 @@ const Contact = () => {
                   rows="5"
                   placeholder="Your Message"
                   value={formData.message}
-                  onChange={handleChange}
+                  onChange={handleOnChange}
                   required
                 ></textarea>
               </div>
               <div className="text-center">
-                <button type="submit" className="btn contact-btn">
-                  🚀 Send Message
+                <button
+                  type="submit"
+                  className="btn contact-btn"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      <span
+                        className="spinner-border spinner-border-sm me-2"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Sending .....
+                    </>
+                  ) : (
+                    "🚀 Send Message"
+                  )}
                 </button>
               </div>
-              <p className="text-center mt-2">{status}</p>
+              {/* {responseMessage && (
+                <p className=" text-center mt-2">{responseMessage}</p>
+              )} */}
             </form>
           </div>
         </div>
