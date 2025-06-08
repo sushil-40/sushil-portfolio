@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { postNewMessage } from "../../helpers/axiosHelper";
 import { toast } from "react-toastify";
-// import axios from "axios";
+
 const Contact = () => {
   const iconStyle = {
     color: "#f5f5f5",
@@ -16,7 +16,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [responseMessage, setResponseMessage] = useState("");
+  // const [responseMessage, setResponseMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +32,7 @@ const Contact = () => {
 
       if (result.data.status === "success") {
         toast.success("Email sent successfully!");
-        setResponseMessage(result.message);
+
         setFormData({
           subject: "Message from contact form",
           name: "",
@@ -138,9 +138,6 @@ const Contact = () => {
                   )}
                 </button>
               </div>
-              {/* {responseMessage && (
-                <p className=" text-center mt-2">{responseMessage}</p>
-              )} */}
             </form>
           </div>
         </div>
