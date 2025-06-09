@@ -26,11 +26,10 @@ const Contact = () => {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Start Loading
-
     try {
       const result = await postNewMessage(formData);
-
-      if (result.data.status === "success") {
+      console.log(result);
+      if (result?.status === "success") {
         toast.success("Email sent successfully!");
 
         setFormData({

@@ -8,7 +8,7 @@ const apiProcessor = async ({ method, url, data }) => {
       url,
       data,
     });
-    return response;
+    return response.data;
   } catch (error) {
     return {
       status: "error",
