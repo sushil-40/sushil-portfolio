@@ -17,7 +17,7 @@ import prankCalculatorDemo from "../assets/video-demo/prank-calculator-demo.mp4"
 import financeTrackerDemo from "../assets/video-demo/finance_tracker.mp4";
 import tictactoeDemo from "../assets/video-demo/tictactoe.mp4";
 import rockpaperscissorDemo from "../assets/video-demo/rockpaperscissor.mp4";
-import currencyConverterDemo from "../assets/video-demo/currencyConverter.mp4";
+import currencyConverterDemo from "../assets/video-demo/currencyconverter.mp4";
 const projects = [
   {
     id: 1,
