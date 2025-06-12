@@ -57,7 +57,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 30px;
-  padding: 30px 20px;
+  padding: 30px 40px;
 }
 
 .skill {
@@ -291,7 +291,7 @@ button[disabled] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 200px;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .bento-card {
@@ -340,7 +340,26 @@ button[disabled] {
   grid-column: span 2;
   grid-row: span 2;
 }
+/* Span behavior on large screens only */
+@media (min-width: 1200px) {
+  .grid-span-2 {
+    grid-column: span 2;
+  }
 
+  .grid-span-2-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+/* Override spans for iPad Pro and smaller */
+@media (max-width: 1199px) {
+  .grid-span-2,
+  .grid-span-2-2 {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
 /* ======================= reveal animation ======================================== */
 
 .reveal {

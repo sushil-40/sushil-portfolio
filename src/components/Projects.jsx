@@ -15,6 +15,9 @@ import flickStoreDemo from "../assets/video-demo/flick-store-demo.mp4";
 import timewiseDemo from "../assets/video-demo/time-wise-demo.mp4";
 import prankCalculatorDemo from "../assets/video-demo/prank-calculator-demo.mp4";
 import financeTrackerDemo from "../assets/video-demo/finance_tracker.mp4";
+import tictactoeDemo from "../assets/video-demo/tictactoe.mp4";
+import rockpaperscissorDemo from "../assets/video-demo/rockpaperscissor.mp4";
+import currencyConverterDemo from "../assets/video-demo/currencyConverter.mp4";
 const projects = [
   {
     id: 1,
@@ -34,7 +37,8 @@ const projects = [
     title: "TimeWise",
     description: "Task tracker with time analytics",
     image: timewiseImage,
-    link: "https://github.com/yourname/timewise",
+    gitLink: "https://github.com/sushil-40/TimeWise",
+    siteLink: "https://sushil-40.github.io/TimeWise/",
     size: "",
     projectDemo: { video: timewiseDemo },
     technologyUsed: ["Html5", "Css3", "Javascript"],
@@ -90,16 +94,6 @@ const projects = [
 
   {
     id: 6,
-    title: "Balancing Beads",
-    description: "Tire balancing calculator",
-    image: "/images/beads.png",
-    link: "https://github.com/yourname/balancing-beads",
-    size: "", // big square
-    technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
-  },
-
-  {
-    id: 7,
     title: "Tic Tac Toe",
     description: "Fun game 😁",
     fullDescription:
@@ -107,11 +101,12 @@ const projects = [
     image: tictactoeImage,
     gitLink: "https://github.com/sushil-40/tic-tac-toe",
     siteLink: "https://sushil-40.github.io/tic-tac-toe/",
-    size: "",
+    size: "grid-span-2",
+    projectDemo: { video: tictactoeDemo },
     technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
   {
-    id: 8,
+    id: 7,
     title: "Rock Paper Scissor",
     description: "Mini game 🫠",
     fullDescription:
@@ -120,10 +115,11 @@ const projects = [
     gitLink: "https://github.com/sushil-40/RockPaperScissors",
     siteLink: "https://sushil-40.github.io/RockPaperScissors/",
     size: "",
+    projectDemo: { video: rockpaperscissorDemo },
     technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
   {
-    id: 9,
+    id: 8,
     title: "Currency Converter",
     description: "Online Currency Converter",
     fullDescription:
@@ -132,32 +128,9 @@ const projects = [
     gitLink: "https://github.com/sushil-40/Currency-Converter",
     siteLink: "https://sushil-40.github.io/Currency-Converter/",
     size: "",
+    projectDemo: { video: currencyConverterDemo },
     technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
-  // {
-  //   id: 10,
-  //   title: "Finance Tracker",
-  //   description: "Manage daily finances smartly",
-  //   image: "/images/finance.png",
-  //   link: "https://github.com/yourname/finance-tracker",
-  //   size: "",
-  // },
-  // {
-  //   id: 11,
-  //   title: "Finance Tracker",
-  //   description: "Manage daily finances smartly",
-  //   image: "/images/finance.png",
-  //   link: "https://github.com/yourname/finance-tracker",
-  //   size: "",
-  // },
-  // {
-  //   id: 12,
-  //   title: "Finance Tracker",
-  //   description: "Manage daily finances smartly",
-  //   image: "/images/finance.png",
-  //   link: "https://github.com/yourname/finance-tracker",
-  //   size: "",
-  // },
 ];
 
 const Projects = () => {
@@ -273,14 +246,6 @@ const Projects = () => {
                 <h5 style={{ color: "SlateBlue" }}>
                   Technology Used <hr className="container" />
                 </h5>
-                {/* <p>Html, Css, JavaScript, React</p> */}
-
-                {/* <ul>
-                  {selectedProject.technologyUsed.map((tech, idx) => (
-                    <li key={idx}>{tech}</li>
-                  ))} 
-               
-                </ul> */}
                 <p> {selectedProject.technologyUsed.join(", ")}</p>
                 <hr />
                 <h4 style={{ color: "SlateBlue" }}>

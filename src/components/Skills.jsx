@@ -26,6 +26,20 @@ const Skills = () => {
       target: 70,
     },
     {
+      title: "MongoDB",
+      iconClass: "fas fa-database",
+      color: "#4DB33D",
+      id: "number-m",
+      target: 65,
+    },
+    {
+      title: "Express",
+      iconClass: "fa-solid fa-cloud",
+      color: "#f2f0f0",
+      id: "number-e",
+      target: 60,
+    },
+    {
       title: "React",
       iconClass: "fab fa-react",
       color: "#61DAFB",
@@ -38,13 +52,6 @@ const Skills = () => {
       color: "#339933",
       id: "number-n",
       target: 70,
-    },
-    {
-      title: "MongoDB",
-      iconClass: "fas fa-database",
-      color: "#4DB33D",
-      id: "number-m",
-      target: 65,
     },
   ];
   const handleMouseEnter = (index) => {
