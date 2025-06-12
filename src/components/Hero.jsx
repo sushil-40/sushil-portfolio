@@ -31,7 +31,7 @@ const Hero = () => {
         {/* Buttons below arrow */}
         <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-5">
           <a
-            href="/file-assets/sushil-resume-25.pdf"
+            href="/file-assets/sushil_resume.pdf"
             className="btn btn-outline-light btn-lg "
             download="sushil-resume"
             target="_blank"
