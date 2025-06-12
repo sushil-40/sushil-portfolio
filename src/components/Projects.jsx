@@ -27,6 +27,7 @@ const projects = [
     siteLink: "https://flick-store.vercel.app/",
     size: "grid-span-2", // wide
     projectDemo: { video: flickStoreDemo },
+    technologyUsed: ["Html5", "Css3", "React", "Javascript", "Bootstrap"],
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const projects = [
     link: "https://github.com/yourname/timewise",
     size: "",
     projectDemo: { video: timewiseDemo },
+    technologyUsed: ["Html5", "Css3", "Javascript"],
   },
   {
     id: 3,
@@ -48,6 +50,7 @@ const projects = [
     siteLink: "https://prank-calculator-using-react-4f8uqlaqg.vercel.app/",
     size: "",
     projectDemo: { video: prankCalculatorDemo },
+    technologyUsed: ["Html5", "Css3", "Javascript", "React"],
   },
   {
     id: 4,
@@ -60,6 +63,16 @@ const projects = [
     siteLink: "https://finance-tracker-client-nu.vercel.app/",
     size: "grid-span-2-2",
     projectDemo: { video: financeTrackerDemo },
+    technologyUsed: [
+      "Html5",
+      "Css3",
+      "Bootstrap",
+      "Javascript",
+      "React",
+      "Mongodb",
+      "Express",
+      "Node",
+    ],
   },
   {
     id: 5,
@@ -72,6 +85,7 @@ const projects = [
     siteLink: "https://sushil-40.github.io/Contact-List/",
     size: "grid-span-2-2",
     projectDemo: { video: contactListDemo },
+    technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
 
   {
@@ -81,6 +95,7 @@ const projects = [
     image: "/images/beads.png",
     link: "https://github.com/yourname/balancing-beads",
     size: "", // big square
+    technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
 
   {
@@ -93,6 +108,7 @@ const projects = [
     gitLink: "https://github.com/sushil-40/tic-tac-toe",
     siteLink: "https://sushil-40.github.io/tic-tac-toe/",
     size: "",
+    technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
   {
     id: 8,
@@ -104,6 +120,7 @@ const projects = [
     gitLink: "https://github.com/sushil-40/RockPaperScissors",
     siteLink: "https://sushil-40.github.io/RockPaperScissors/",
     size: "",
+    technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
   {
     id: 9,
@@ -115,6 +132,7 @@ const projects = [
     gitLink: "https://github.com/sushil-40/Currency-Converter",
     siteLink: "https://sushil-40.github.io/Currency-Converter/",
     size: "",
+    technologyUsed: ["Html5", "Css3", "Javascript", "Bootstrap"],
   },
   // {
   //   id: 10,
@@ -255,7 +273,15 @@ const Projects = () => {
                 <h5 style={{ color: "SlateBlue" }}>
                   Technology Used <hr className="container" />
                 </h5>
-                <p>Html, Css, JavaScript, React</p>
+                {/* <p>Html, Css, JavaScript, React</p> */}
+
+                {/* <ul>
+                  {selectedProject.technologyUsed.map((tech, idx) => (
+                    <li key={idx}>{tech}</li>
+                  ))} 
+               
+                </ul> */}
+                <p> {selectedProject.technologyUsed.join(", ")}</p>
                 <hr />
                 <h4 style={{ color: "SlateBlue" }}>
                   Description <hr className="container" />
